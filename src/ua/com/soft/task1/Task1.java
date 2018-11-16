@@ -24,7 +24,6 @@ public class Task1 {
         for (int i : myArray) {
             myCollection.add((Integer) i);
         }
-
         System.out.println("myCollecton:\n" + myCollection.size() + " " + myCollection);
 
         List<Integer> newCollection = new LinkedList<Integer>();
@@ -45,13 +44,22 @@ public class Task1 {
         System.out.println("myCollecton after removing:\n" + myCollection.size() + " " + myCollection);
 
         if (myCollection.size() > 8) {
-            myCollection.set(2, (Integer) 1);
-            myCollection.set(8, (Integer) (-3));
-            myCollection.set(5, (Integer) (-4));
+            myCollection.add(2, (Integer) 1);
+            myCollection.add(8, (Integer) (-3));
+            myCollection.add(5, (Integer) (-4));
         } else System.out.println("myColllection size = " + myCollection.size() + ", can`t add 8-s element");
-        System.out.println("myCollecton after inserts:" + myCollection.size() + " " + myCollection);
+        System.out.println("myCollecton after inserts:\n" + myCollection.size() + " " + myCollection);
 
         Collections.sort(myCollection);
         System.out.println("myCollecton sorted:\n" + myCollection.size() + " " + myCollection);
+
+        System.out.println(getPositionsAndValues(myCollection));
+    }
+    static String getPositionsAndValues(List<Integer> list) {
+        String result = "";
+        for (int i = 0; i < list.size(); i++) {
+            result += String.format("position - %1$s, value of element - %2$s\n",i,list.get(i));
+        }
+        return result;
     }
 }
