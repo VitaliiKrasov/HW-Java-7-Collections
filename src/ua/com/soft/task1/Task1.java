@@ -42,18 +42,16 @@ public class Task1 {
                 iterator.remove();
             }
         }
-
         System.out.println("myCollecton after removing:\n" + myCollection.size() + " " + myCollection);
 
         if (myCollection.size() > 8) {
-            myCollection.add(2, (Integer) 1);
-            myCollection.add(8, (Integer) (-3));
-            myCollection.add(5, (Integer) (-4));
+            myCollection.set(2, (Integer) 1);
+            myCollection.set(8, (Integer) (-3));
+            myCollection.set(5, (Integer) (-4));
         } else System.out.println("myColllection size = " + myCollection.size() + ", can`t add 8-s element");
-        System.out.println(myCollection.size() + " " + myCollection);
+        System.out.println("myCollecton after inserts:" + myCollection.size() + " " + myCollection);
 
         Collections.sort(myCollection);
         System.out.println("myCollecton sorted:\n" + myCollection.size() + " " + myCollection);
-
     }
 }
