@@ -1,4 +1,4 @@
-package ua.com.soft.homework1;
+package ua.com.soft.main;
 
 /**
  * Write parameterized methods union(Set set1, Set set2) and intersect(Set set1, Set set2),
