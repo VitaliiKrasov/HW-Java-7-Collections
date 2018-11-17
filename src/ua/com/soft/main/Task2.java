@@ -36,19 +36,25 @@ public class Task2 {
 
         System.out.println("\nEnter name:");
         String name = reader.readLine();
-        for (Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
-            if (entry.getValue().equals(name)) {
-                Integer finded = entry.getKey();
-                System.out.println(finded);
-            }
-        }
+
+        Integer idByName = getByName(employeeMap, name);
+
+        System.out.println(idByName);
 
     }
 
-    private static String getById(Map<Integer, String> employeeMap, Integer id) {
+    static String getById(Map<Integer, String> employeeMap, Integer id) {
         if (employeeMap.containsKey(id)) {
             return employeeMap.get(id);
         } else return "not exist";
+    }
+
+    static Integer getByName(Map<Integer, String> employeeMap, String name) {
+        for (Map.Entry<Integer, String> entry : employeeMap.entrySet()) {
+            if (entry.getValue().equals(name)) {
+                return entry.getKey();
+            }
+        } return -1;
     }
 
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
