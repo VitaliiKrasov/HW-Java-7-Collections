@@ -26,13 +26,13 @@ public class Task2 {
         employeeMap.put(80, "Nick Noby");
 
         System.out.println(employeeMap);
-//
+
         System.out.println("\nEnter ID:");
+
         Integer id = Integer.parseInt(reader.readLine());
-        if (employeeMap.containsKey(id)) {
-            String finded = employeeMap.get(id);
-            System.out.println(finded);
-        } else System.out.println("not exist");
+
+        String nameById = getById(employeeMap, id);
+        System.out.println(nameById);
 
         System.out.println("\nEnter name:");
         String name = reader.readLine();
@@ -43,6 +43,12 @@ public class Task2 {
             }
         }
 
+    }
+
+    private static String getById(Map<Integer, String> employeeMap, Integer id) {
+        if (employeeMap.containsKey(id)) {
+            return employeeMap.get(id);
+        } else return "not exist";
     }
 
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
