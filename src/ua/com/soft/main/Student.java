@@ -1,13 +1,15 @@
 //package ua.com.soft.homework3;
 //
 //import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.List;
 //
 ///**
 // * Write class Student that provides information about the name of the student and his course.
 // * Class Student should consists of
 // *  - properties for access to these fields
 // *  - constructor with parameters
-// *  - method printStudents (List students, Integer course),
+// *  - method getStudentsByCourse (List students, Integer course),
 // *  which receives a list of students and the course number
 // *  and prints to the console the names of the students from the list,
 // *  which are taught in this course (use an iterator)
@@ -42,14 +44,12 @@
 //        return course.intValue();
 //    }
 //
-//    static void printStudents (List students, Integer course){
-//        String result = students. ;
-//        System.out.println(result);
-//
+//    static String getStudentsByCourse(List students, Integer course){
+//        String result;
+//        return result;
 //    }
 //
-//    static class List {
-//        List students = new ArrayList<String name, Integer course>();
-//
+//    public static void main(String[] args) {
+//        List<String, Integer> students = new ArrayList<String name, Integer course>();
 //    }
 //}
